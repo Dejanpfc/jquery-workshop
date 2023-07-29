@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            background: red;
+            padding: 10px 30px;
+            color: #fff;
+            font: 2rem sans-serif;
+            cursor: pointer;
+        }
+
+        .skriven {
+            display: none;
+            font: 6rem sans-serif;
+            background-color: orange;
+            color: #fff;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            border: 10px solid salmon;
+            margin: 20px auto;
+            background-color: cornflowerblue;
+
+        }
+    </style>
+    <title>JQUERY</title>
+</head>
+
+<body>
+    <h1>Skrivanje i otkrivanje</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum non natus architecto rerum possimus
+        exercitationem, commodi laboriosam necessitatibus consequuntur saepe aperiam! Pariatur veritatis explicabo velit
+        placeat laudantium totam sunt optio.</p>
+    <div class="skriven">Cao ne vidite me</div>
+    <button>Klik da pogledate slike</button>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        // $('.skriven').show(2000);
+        // $('.skriven').hide(3000);
+
+        // $('.skriven').fadeIn(2000);
+        // $('.skriven').fadeOut(3000);
+
+        $('.box').click(function () {
+            $(this).fadeTo(2000, 0.25, function () {
+                $(this).slideUp()
+            })
+        })
+        $('button').click(function () {
+            $('.box').slideToggle()
+        })
+
+
+    </script>
+</body>
+
+</html>

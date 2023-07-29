@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JQUERY</title>
+</head>
+
+<body>
+    <h1>Kretanje kroz dom</h1>
+    <hr>
+    <h2>naslov 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda accusamus qui vel, magnam sint quo dignissimos
+        esse fuga distinctio eos cum, provident hic et? Dignissimos, sequi nihil? Maxime, corporis veritatis!</p>
+    <ul>
+        <li>Clan list</li>
+        <li>clan liste</li>
+        <li class="izdvojen">clan liste</li>
+        <li> clan liste</li>
+    </ul>
+    <hr>
+    <h2>naslov 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda accusamus qui vel, magnam sint quo dignissimos
+        esse fuga distinctio eos cum, provident hic et? Dignissimos, sequi nihil? Maxime, corporis veritatis!</p>
+    <ol>
+        <li>Clan list</li>
+        <li>clan liste</li>
+        <li class="izdvojen">clan liste</li>
+        <li> clan liste</li>
+    </ol>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $('li').css('color', 'blue')
+        $('li').filter('.izdvojen').css('color', 'red')
+        $('ul').find('li').css('color', 'green')
+        $('.izdvojen').next().css('background', 'red')
+        $('.izdvojen').prev().css('background', 'orange')
+        $('ol').children().css('fontSize', '30px')
+        $('li').parent().css('background', 'yellow')
+        $('li').not('.izdvojen').css('background', 'purple')
+        $('li').not('.izdvojen').css('color', 'white')
+    </script>
+
+</body>
+
+</html>

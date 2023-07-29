@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .notifikacija {
+            background-color: orange;
+            padding: 40px;
+            font: 2rem sans-serif;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notifikacija" style="display: none;">
+        <!-- Your notification content here -->
+        This is a notification.
+    </div>
+
+    <script>
+        // Function to perform the notification animation
+        function showNotification() {
+            $('.notifikacija')
+                .delay(2000)
+                .slideDown(2000)
+                .delay(4000)
+                .fadeOut();
+        }
+
+        // Call the function initially
+        showNotification();
+
+        // Repeat the notification animation every 8000 milliseconds (8 seconds)
+        setInterval(showNotification, 10000);
+    </script>
+</body>
